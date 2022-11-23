@@ -5,6 +5,13 @@ from django.http import HttpResponse
 # request を受けたときの動作
 
 def index(request):
-    return HttpResponse("Hello, World!")
+    return render(request, "dashboard/index.html")
 
+def Test1(request):
+    return HttpResponse("Hello, Test1!")
 
+def Test2(request):
+    return HttpResponse("Hello, Test2!")
+
+def Test3(request):
+    return HttpResponse("Hello, Test3!")
