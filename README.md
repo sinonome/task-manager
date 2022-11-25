@@ -28,6 +28,6 @@ $ python task_manager/manage.py runserver 8000
 
 ### link
 
-* http://localhost:8000/
+* http://localhost:8000/dashboard/
 * https://getbootstrap.jp/
 
