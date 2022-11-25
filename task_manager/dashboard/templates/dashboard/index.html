@@ -15,15 +15,16 @@
     <!-- header -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
         <div class="container-fluid">
-            <div class="navigation-style">
+            {% comment %} <div class="navigation-style">
                 <!-- ブランド名の表示 -->
                 <a href="#" class="navbar-brand">Task Manager</a>
-            </div>
+            </div> {% endcomment %}
+            <a href="#" class="navbar-brand">Task Manager</a>
             <!-- TODO: 画面が縮小した時に toggle に収まるようにする -->
-            <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navimenu" aria-controls="navimenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+            <div class="navbar-collapse offcanvas-collapse" id="navimenu">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0a">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">
@@ -51,14 +52,56 @@
             </div>
         </div>
     </nav>
+    <!-- main contents -->
     <main class="container">
-        <!-- main -->
-        <div>
-            <a href="">hello</a>
-        </div>
-        <!-- time line -->
-        <div>
-            <a href="">world</a>
+        <div class="row">
+            <!-- information -->
+            <div class="col-8">
+                <div class="row">
+                    <a href="#">hello</a>
+                </div>
+                <div class="row">
+                    <a href="#">hello</a>
+                </div>
+                <div class="row">
+                    <a href="#">hello</a>
+                </div>
+            </div>
+            <!-- time line -->
+            <div class="col-4 timeline">
+                <div class="my-3 bg-body rounded shadow-sm">
+                    <!-- Header -->
+                    <div>
+                        <nav class="navbar navbar-dark bg-dark text-white p-2">
+                            <h3>TimeLine</h3>
+                        </nav>
+                    </div>
+                    <!-- TimeLine body -->
+                    <div class="p-1">
+                        <!-- TimeLine contents -->
+                        <!-- TODO: 画面下いっぱいまで表示させたい -->
+                        <!-- TODO: 四角い枠線で表示させる -->
+                        <ul>
+                            <li>hello</li>
+                            <li>world</li>
+                            <li>hello</li>
+                            <li>world</li>
+                            <li>hello</li>
+                            <li>world</li>
+                            <li>hello</li>
+                            <li>world</li>
+                            <li>hello</li>
+                            <li>world</li>
+                            <li>hello</li>
+                            <li>world</li>
+                            <li>hello</li>
+                            <li>world</li>
+                            <li>hello</li>
+                            <li>world</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>

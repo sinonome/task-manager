@@ -5,3 +5,15 @@
     margin-right: auto;
     margin-left: auto;
 }
+
+body {
+    height: 100%;
+    padding-top: 70px;
+    overflow: hidden;
+}
+
+.timeline {
+    height: 100%;
+    padding: 0 0 0 10pm;
+}
+
