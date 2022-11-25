@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # ここで app の dashboard とリンク。
     path('dashboard/', include('dashboard.urls')),
+    path('dashboard/', include('dashboard.urls')),
 ]

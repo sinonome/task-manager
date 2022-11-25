@@ -15,3 +15,6 @@ def Test2(request):
 
 def Test3(request):
     return HttpResponse("Hello, Test3!")
+
+def TestPage(request):
+    return render(request, "testpage/TestPage.html")
