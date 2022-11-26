@@ -7,8 +7,8 @@ from django.http import HttpResponse
 def index(request):
     return render(request, "dashboard/index.html")
 
-def Test1(request):
-    return HttpResponse("Hello, Test1!")
+def task_form(request):
+    return render(request, "form/index.html")
 
 def Test2(request):
     return HttpResponse("Hello, Test2!")
