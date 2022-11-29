@@ -6,6 +6,10 @@
     margin-left: auto;
 }
 
+html, .container, .row {
+    height: 100%;
+}
+
 body {
     height: 100%;
     padding-top: 70px;
@@ -13,7 +17,28 @@ body {
 }
 
 .timeline {
+    overflow: hidden;
     height: 100%;
     padding: 0 0 0 10pm;
+}
+
+.timeline-frame {
+    height:100%;
+    overflow: hidden;
+}
+
+.timeline-contents {
+    height: 100%;
+    overflow: hidden;
+}
+
+.timeline-contents-scroll {
+    height: 100%;
+    overflow: scroll;
+}
+
+.record-block {
+    overflow: hidden; /* はみ出した部分を非表示 */
+    border-radius: 10px;
 }
 
