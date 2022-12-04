@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'dashboard/style.css' %}" />
+    <!-- bootstrap -->
+    <!-- css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</head>
+<body class="bg-light">
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+        <div class="container-fluid">
+            {% comment %} <div class="navigation-style">
+                <!-- ブランド名の表示 -->
+                <a href="../dashboard/" class="navbar-brand">Task Manager</a>
+            </div> {% endcomment %}
+            <a href="../dashboard/" class="navbar-brand">Task Manager</a>
+            <!-- TODO: 画面が縮小した時に toggle に収まるようにする -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navimenu" aria-controls="navimenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse offcanvas-collapse" id="navimenu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0a">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../dashboard/">
+                            記録
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            目標・課題登録
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            スケジュール設定
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="#">
+                        <button class="btn btn-outline-success">
+                            記録する
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- main contents -->
+    <main class="container">
+        <form onsubmit="return false;">
+            <div class="mb-3">
+                <label for="task-name-form" class="form-label">タスク名</label>
+                <input id="task-name-form" class="form-control form-control-sm" type="text" placeholder="タスク名"
+                    aria-label=".form-control-sm example">
+            </div>
+            <div class="mb-3">
+                <label for="select-parent-task" class="form-label">目標名</label>
+                <select class="form-control" aria-label="select-parent-task">
+                    <option selected>選択</option>
+                    <option value="1">基本情報</option>
+                    <option value="2">応用情報</option>
+                    <option value="3">漢検</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="task-details" class="form-label">詳細</label>
+                <textarea class="form-control" id="task-details" rows="5"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary">登録</button>
+        </form>
+    </main>
+</body>
+</html>
