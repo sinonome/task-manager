@@ -10,6 +10,12 @@ def index(request):
 def task_form(request):
     return render(request, "form/index.html")
 
+def record_study(request):
+    return render(request, "form/record.html")
+
+def schedule(request):
+    return render(request, "form/schedule.html")
+
 def Test2(request):
     return HttpResponse("Hello, Test2!")
 
