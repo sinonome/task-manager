@@ -32,6 +32,12 @@ $ python task_manager/manage.py runserver 8000
 sudo apt install -y python3-pip python3-dev libpq-dev postgresql postgresql-contrib
 ```
 
+### create database
+
+```
+python manage.py makemigrations
+```
+
 
 
 ### link
